@@ -1,87 +1,222 @@
-\documentclass[10pt]{article}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage{hyperref}
-\hypersetup{colorlinks=true, linkcolor=blue, filecolor=magenta, urlcolor=cyan,}
+%-------------------------
+% Resume in Latex
+% Author : Sidratul Muntaha Ahmed
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
 \urlstyle{same}
 
-\title{EDUCATION }
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
 
-\author{}
-\date{}
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-10pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.1in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 \begin{document}
-\maketitle
-Purdue University | West Lafayette, IN | B.S. Computer Science + Artificial Intelligence (double major) May 2026
 
-\begin{itemize}
-  \item Major GPA: 3.3
-  \item Relevant Coursework: Analysis of Algorithms, Data Mining and Machine Learning, Systems Programming, Data Structures and Algorithms, Computer Architecture, Linear Algebra, Calc III, Intro to Statistics\\
-The Harker School | San Jose, CA | High School Diploma\\
-2018 - 2022
-  \item SAT: 1520
-  \item Captain of Varsity Football team for three seasons; Captain of Varsity Basketball team for one season
-\end{itemize}
+%----------HEADING----------
 
-\section*{SKILLS}
-Programming Languages:\\
-C, C++, Java, Python, HTML, CSS\\
-Technologies:\\
-Qt, Tensorflow/Keras, Linux, Git, Imgaug, OpenCV, Textual, ClearML, Pytorch, CNNs
 
-\section*{EMPLOYMENT HISTORY}
-Computer Vision Researcher @ Digital Enterprise Center || West Lafayette, IN March 2024 - Present
+\begin{center}
+    \textbf{\large \scshape John Zeng} \\ \vspace{1pt}
+    \small 650-224-8688 $|$ \href{mailto:johnzeng878@gmail.com}{\underline{johnzeng878@gmail.com}} $|$ 
+    \href{https://linkedin.com/in/John-L-Zeng}{\underline{linkedin.com/in/John-L-Zeng}} $|$
+    \href{https://github.com/jlz22}{\underline{github.com/jlz22}}
+\end{center}
 
-\begin{itemize}
-  \item Leading a team of two to build a computer vision model to identify foreign objects in an assembly space.
-  \item Utilized multiprocessing image augmentation to generate synthetic data, effectively addressing the challenges posed by a short-staffed team.
-  \item Implemented an automated documentation process that triggers changes to Python modules or workflow instructions, leveraging GitHub Actions and Pages to maintain an up-to-date, accessible API documentation site (\href{https://ilz22.github.io/Computer-Vision-for-FOD/index.html}{https://ilz22.github.io/Computer-Vision-for-FOD/index.html}).
-  \item Developing an interactive GUI using PySide and the Qt framework to display camera input from three sources, as an orthographic projection. The interface enables users to select regions of interest for each camera view, within which the computer vision model detects foreign objects.\\
-Head Teaching Assistant for Advanced + Regular Programming @ The Harker School | San Jose, CA\\
-Summer 2024
-  \item Taught lessons in memory allocation, object and data-type basics, recursion, and coding standards.
-  \item Provided clarification to junior TAs for ambiguous assignment instructions and grading rubrics.
-  \item Led review sessions to explain frequently missed test questions and difficult concepts.
-\end{itemize}
 
-Teaching Assistant for Advanced Programming @ The Harker School | San Jose, CA\\
-Summer 2023
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Purdue University}{West Lafayette, IN}
+      {Bachelor of Science}{Expected May 2026}
+          \resumeItemListStart
+          \resumeItem{Double Major: Computer Science and Artificial Intelligence}
+            \resumeItem{GPA: 3.3}
+            
+        \resumeItemListEnd
 
-\begin{itemize}
-  \item Tutored students in object-oriented-programming and Java fundamentals.
-  \item Graded physical exams as well as projects.
-\end{itemize}
+  \resumeSubHeadingListEnd
 
-Investment Analyst Intern @ Draper Dragon | San Mateo, CA\\
-Summer 2022
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
 
-\begin{itemize}
-  \item Researched metaverse/blockchain gaming space and presented to general partners about the nuanced differences in industry leaders' platform designs along with their respective drawbacks and benefits.
-  \item Wrote two investment memos detailing company financials, market opportunity, risk factors, platform/product description, competition, valuation, company history, and team history (redacted sample memo).
-  \item Participated in weekly deal flow meetings.
-  \item Managed a spreadsheet that tracked venture opportunities and those startups' relevant information.
-  \item Building a TUI that simulates a rugby passing drill based on user controlled parameters using the Textual framework.
-  \item Tracks player oscillation between lines with the goal of discovering a formula to yield 0 oscillations over 200 passes. Shell | (C++)
-\end{itemize}
+    \resumeSubheading
+      {Computer Vision Researcher}{March 2024 – Present}
+      {Digital Enterprise Center}{West Lafayette, IN}
+      \resumeItemListStart
+        \resumeItem{Leading a team of two to build a \textbf{computer vision} model to identify foreign objects in an assembly space.
+        }
+        \resumeItem{Utilized multiprocessing image augmentation to generate synthetic data, effectively addressing the challenges posed by a short-staffed team.
+        }
+        \resumeItem{Implemented an automated documentation process that triggers when changes to Python modules or workflow instructions are made, leveraging \textbf{GitHub Actions} and \textbf{Pages} to maintain an up-to-date, accessible API documentation \href{https://jlz22.github.io/Computer-Vision-for-FOD/index.html}{\underline{site}}.}
+        \resumeItem{Developing an interactive GUI using \textbf{PySide} and the \textbf{Qt} framework to display camera input from three sources, as an orthographic projection. The interface enables users to select regions of interest for each camera view, within which the computer vision model detects foreign objects.
+        }
+        \resumeItemListEnd
+      
+    \resumeSubheading
+      {Head Teaching Assistant for Advanced + Regular Programming}{Summer 2024}
+      {The Harker School}{San Jose, CA}
+      \resumeItemListStart
+        \resumeItem{Taught lessons in memory allocation, object and data-type basics, recursion, and coding standards.
+        }
+        \resumeItem{Provided clarification to junior TAs for ambiguous assignment instructions and grading rubrics.
+        }
+        \resumeItem{Led review sessions to explain frequently missed test questions and difficult concepts.
+        }
+      \resumeItemListEnd
 
-April 2024
+    \resumeSubheading
+    {Teaching Assistant for Advanced Programming}{Summer 2023}
+    {The Harker School}{San Jose, CA}
+      \resumeItemListStart
+        \resumeItem{Tutored students in object-oriented-programming and Java fundamentals.}
+        \resumeItem{Graded physical exams as well as projects.}
+        \resumeItemListEnd
+      
+    \resumeSubheading
+    {Investment Analyst Intern}{Summer 2022}
+    {Draper Dragon}{San Mateo, CA}
+      \resumeItemListStart
+        \resumeItem{Researched \textbf{metaverse/blockchain gaming} space and presented to general partners about the nuanced differences in industry leaders’ platform designs along with their respective drawbacks and benefits.
+        }
+        \resumeItem{Wrote two investment \href{https://drive.google.com/file/d/14b7ZHeRLfU3-GW80YL8XoYoTLx4nNZax/view?usp=sharing}{\underline{memos}} detailing company financials, market opportunity, risk factors, platform/product description, competition, valuation, company history, and team history.}
+        \resumeItemListEnd
+    \resumeSubHeadingListEnd
 
-\begin{itemize}
-  \item Created a shell interface capable of executing commands with subshell, if statements, while loops, script execution, and wildcarding in addition to all basic terminal commands like pipes, environment variables, and file system traversal.
-  \item Used Lex and Yacc to read and parse commands.
-  \item Wrote C++ classes to represent and execute different types of commands.
-\end{itemize}
+%-----------PROJECTS-----------
+\section{Projects}
 
-Git Tutorial | (Markdown)\\
-March 2024
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{Rugby Drill Simulator} $|$ \emph{Textual, Python}}{June 2024 -- Present}
+          \resumeItemListStart
+            \resumeItem{Building a TUI that simulates a rugby passing drill based on user controlled parameters using the Textual framework.
+            }
+            \resumeItem{Tracks player oscillation between lines with the goal of discovering a formula to yield 0 oscillations over 200 passes.}
+          \resumeItemListEnd
 
-\begin{itemize}
-  \item Educated inexperienced developers on the basics of Git.
-  \item Provided examples of common problems and possible solutions along with links for further research.
-  \item Explained the best practices and workflow for introductory Git usage.
-  \item I enjoy playing volleyball recreationally and am on Purdue's club rugby team.
-  \item I love riding my Onewheel in my free time.
-\end{itemize}
+      \resumeProjectHeading
+          {\textbf{Shell} $|$ \emph{Lex, Yacc, C++, Cmake}}{April 2024}
+          \resumeItemListStart
+            \resumeItem{Created a shell interface capable of executing commands with subshell, if statements, while loops, script execution, and wildcarding in addition to all basic terminal commands like pipes, environment variables, and file system traversal.
+            }
+          \resumeItemListEnd
+         
+      \resumeProjectHeading
+          {\textbf{Git Tutorial} $|$ \emph{Markdown}}{March 2024}
+          \resumeItemListStart
+            \resumeItem{Educated inexperienced developers on the basics of Git.}
+            \resumeItem{Covered topics such as cloning, branching, committing, and pushing.}
+            \resumeItem{Provided examples of common problems like merge conflicts and possible solutions along with links for further research.}
+          \resumeItemListEnd
+         
+    \resumeSubHeadingListEnd
 
+
+%
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Python, C, C++, Java, HTML, CSS} \\
+     \textbf{Frameworks}{: Textual, Qt, Ultralytics, Tensorflow/Keras, Pytorch, ClearML, NumPy} \\
+     \textbf{Libraries}{: OpenCV, Imgaug} \\
+    }}
+ \end{itemize}
+
+
+%-------------------------------------------
 \end{document}
