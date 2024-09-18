@@ -1,5 +1,6 @@
 # Paragraph Descriptions of Work Experience
 
+## Computer Vision Researcher:
 ## Digital Enterprise Center: 
 
 I am leading a team of two in developing a solution for assembly lines that addresses the risk of foreign objects such as tools or drill bits being left behind, potentially damaging machinery and products. By uptraining the YOLOv8 computer vision model, the program identifies these objects and notifies the operator. To tackle the challenges posed by a short-staffed team, I leveraged multiprocessing image augmentation to generate synthetic data. Additionally, I implemented an automated documentation process using GitHub Actions and Pages, ensuring future developers can easily access and maintain API documentation. As part of the project, I am also building an interactive GUI using Rust, Tauri, and Svelte, which displays camera input from three sources in orthographic projection. This interface allows users to define regions of interest for each camera view, enabling precise foreign object detection by the model.
