@@ -89,8 +89,6 @@
     \end{tabular*}\vspace{-8.5pt}
 }
 
-\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-5pt}}
-
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.1in, label={}]}
@@ -141,14 +139,18 @@
       {Computer Vision Researcher}{March 2024 – Present}
       {Digital Enterprise Center}{West Lafayette, IN}
       \resumeItemListStart
-        \resumeItem{Problem: In assembly lines that employ human technicians, foreign objects (tools, drill bits, etc.) can be left behind, causing damage to machinery and products.}
-        \resumeItem{Leading a team of two to build a program that identifies when foreign objects are left behind and notify the operator by \textbf{uptraining} the \textbf{YoloV8 computer vision} model.
+        \resumeItem{\underline{Problem}: In assembly lines that employ human technicians, foreign objects (tools, drill bits, etc.) can be left behind, causing damage to machinery and products.}
+        \resumeItem{Leading a team of two to build a program that identifies when foreign objects are left behind and notifies the operator by implementing a \textbf{two-stage segmentation} architecture.
         }
         \resumeItem{Implemented an automated documentation process to enhance clarity for future developers by leveraging \textbf{GitHub Actions} and \textbf{Pages} to maintain an up-to-date, accessible API documentation \href{https://jlz22.github.io/Computer-Vision-for-FOD/index.html}{\underline{site}}.}
-        \resumeItem{Developing an interactive GUI using \textbf{Rust}, \textbf{Tauri}, and \textbf{Svelte} to display camera input from three sources as an orthographic projection. 
+        \resumeItem{Built a desktop application prototype for a real time multi-camera detection system using \textbf{Rust}, \textbf{Tauri}, and \textbf{Svelte}. 
         }
-        \resumeItem{Optimize frame rate by leveraging a combination of \textbf{asynchronous runtimes} and \textbf{multi-threading} to process camera inputs in parallel.}
-        \resumeItem{Utilized multiprocessing \textbf{image augmentation} to generate synthetic data, effectively addressing the challenges posed by a short-staffed team.
+        \resumeItemListStart
+        \vspace{-12pt}
+        \resumeItem{Optimize frame rate by \textbf{5x} with a combination of \textbf{asynchronous runtimes} and \textbf{multi-threading} to process camera inputs and inference in parallel.}
+        \vspace{2pt}
+        \resumeItemListEnd
+        \resumeItem{Applied \textbf{image augmentation} to generate synthetic data, effectively addressing data collection and labelling challenges posed by a short-staffed team.
         }
         \resumeItemListEnd
       
@@ -171,15 +173,6 @@
         \resumeItem{Tutored students in object-oriented-programming and Java fundamentals.}
         \resumeItem{Graded paper exams as well as projects.}
         \resumeItemListEnd
-      
-    \resumeSubheading
-    {Investment Analyst Intern}{Summer 2022}
-    {Draper Dragon}{San Mateo, CA}
-      \resumeItemListStart
-        \resumeItem{Researched \textbf{metaverse/blockchain gaming} space and presented to general partners about the nuanced differences in industry leaders’ platform designs along with their respective drawbacks and benefits.
-        }
-        \resumeItem{Wrote investment \href{https://drive.google.com/file/d/14b7ZHeRLfU3-GW80YL8XoYoTLx4nNZax/view?usp=sharing}{\underline{memos}} detailing company financials, market opportunity, risk factors, value proposition, etc.}
-        \resumeItemListEnd
     \resumeSubHeadingListEnd
 
 %-----------PROJECTS-----------
@@ -187,11 +180,12 @@
 
     \resumeSubHeadingListStart
       \resumeProjectHeading
-          {\textbf{Rugby Drill Simulator} $|$ \emph{Python}}
+          {\textbf{Rugby Drill Simulator} $|$ \emph{Python, PyGame}}
           \resumeItemListStart
-            \resumeItem{Using Python to simulate a common rugby passing drill ("infinite passing")
+            \resumeItem{Using Python and PyGame to simulate a common rugby passing drill "infinite passing" to demonstrate a phenomenon I call player oscillations
             }
-            \resumeItem{Aims to find an algorithm that can determine if any given set of inputs will result in a zero oscillation drill.}
+            \resumeItem{Mathematically determines if and when a player will oscillate between two lines given any valid drill configuration and number of total passes.}
+            \resumeItem{Includes proofs and lemmas supporting the algorithm's correctness and efficiency. }
           \resumeItemListEnd
 
       \resumeProjectHeading
@@ -217,9 +211,9 @@
 \section{Technical Skills}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-     \textbf{Languages}{: Rust, Python, Java, C, C++, Javascript/Typescript, SQL, HTML, CSS} \\
-     \textbf{Frameworks}{: Svelte, Textual, Tauri, Ultralytics, Tensorflow, Keras, Pytorch} \\
-     \textbf{Libraries}{: OpenCV, Imgaug, NumPy, Pandas} \\
+     \textbf{Languages}{: Rust, Python, Java, C, C++, Javascript/Typescript, HTML, CSS} \\
+     \textbf{Frameworks}{: Ultralytics, Tensorflow, Keras, Pytorch, Astro, Svelte, Tauri, TailwindCSS} \\
+     \textbf{Libraries}{: OpenCV, Imgaug, NumPy, Pandas, PyGame} \\
     }}
  \end{itemize}
 
