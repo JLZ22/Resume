@@ -39,11 +39,11 @@
 \renewcommand{\footrulewidth}{0pt}
 
 % Adjust margins
-\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\oddsidemargin}{-0.6in}
 \addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
+\addtolength{\textwidth}{1.4in}
+\addtolength{\topmargin}{-0.75in}
+\addtolength{\textheight}{1.4in}
 
 \urlstyle{same}
 
@@ -53,7 +53,7 @@
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{-10pt}\scshape\raggedright\large
+  \vspace{-11.5pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
 % Ensure that generate pdf is machine readable/ATS parsable
@@ -63,37 +63,37 @@
 % Custom commands
 \newcommand{\resumeItem}[1]{
   \item\small{
-    {#1 \vspace{-2pt}}
+    {#1 \vspace{-1pt}}
   }
 }
 
 \newcommand{\resumeSubheading}[4]{
-  \vspace{-2pt}\item
+  \vspace{-4pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
-      \textit{\small#3} & \textit{\small #4} \\
+      \textit{#3} & \textit{\small #4} \\
     \end{tabular*}\vspace{-8pt}
 }
 
 \newcommand{\resumeSubSubheading}[2]{
-    \item
+    \vspace{-8pt}\item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
       \textit{\small#1} & \textit{\small #2} \\
     \end{tabular*}\vspace{-7pt}
 }
 
-\newcommand{\resumeProjectHeading}[1]{
-    \item
+\newcommand{\resumeProjectHeading}[2]{
+    \vspace{-1pt}\item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \small#1 \\
-    \end{tabular*}\vspace{-8.5pt}
+      \small#1 &\textit{\small#2}\\
+    \end{tabular*}\vspace{-7.5pt}
 }
 
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.1in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListStart}{\vspace{2pt}\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
 %-------------------------------------------
@@ -108,7 +108,7 @@
 \begin{center}
     \textbf{\large \scshape John Zeng} \\ \vspace{1pt}
     \small 650-224-8688 $|$ \href{mailto:johnzeng878@gmail.com}{\underline{johnzeng878@gmail.com}} $|$ 
-    \href{https://johnzeng.me}{\underline{JohnZeng.me}} $|$
+    \href{https://johnzeng.me}{\underline{johnzeng.me}} $|$
     \href{https://github.com/jlz22}{\underline{github.com/jlz22}}
 \end{center}
 
@@ -121,110 +121,99 @@
       {Bachelor of Science}{Expected May 2026}
           \resumeItemListStart
           \resumeItem{Double Major: Computer Science \& Artificial Intelligence}
-          \resumeItem{Coursework: Data Mining and Machine Learning, Intro to AI, Analysis of Algorithms, Data Engineering in Python}
-          \resumeItem{Extracurricular: Purdue Men's Rugby, USA Rugby U19 Nominee}
-          % \resumeItem{SAT: 1520}
+          \resumeItem{Relavent Coursework: Analysis of Algorithms, Relational Database Systems, Data Mining and Machine Learning}
+          % % \resumeItem{Extracurricular: Purdue Men's Rugby, USA Rugby U19 Nominee}
+          % % \resumeItem{SAT: 1520}
             \resumeItemListEnd
 
   \resumeSubHeadingListEnd
+
+%-----------Technical Skills-----------
+
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+    \textbf{Languages}{: Python, Java, C, C++, Javascript/Typescript, Rust, HTML, CSS} \\
+    \textbf{Frameworks}{: Ultralytics, Tensorflow, Keras, PyTorch, Astro, Svelte, Tauri, TailwindCSS} \\
+    \textbf{Libraries}{: OpenCV, Imgaug, NumPy, Pandas, PyGame, plotnine} \\
+    \textbf{VCS}{: Git, GitHub, GitHub Actions, GitHub Pages} \\
+    }}
+\end{itemize}
 
 %-----------EXPERIENCE-----------
 \section{Experience}
   \resumeSubHeadingListStart
     \resumeSubheading
       {Undergraduate Machine Learning Researcher}{January 2025 – Present}
-      {Purdue University}{West Lafayette, IN}
+      {Purdue University Department of Computer Science}{West Lafayette, IN}
       \resumeItemListStart
-        \resumeItem{Developing novel \textbf{meta-reinforcement learning} methods to optimize \textbf{adaptation speed} in highly stochastic environments.}
-        % \resumeItem{Working in Dr. YeXiang Xue's research group with Ph.D. student Maxwell Jacobson}
+        \resumeItem{Developing novel environment exploration methods in \textbf{meta-reinforcement learning} applications to optimize \textbf{adaptation speed} in highly stochastic environments.}
+        \resumeItem{Writing experiments in \textbf{Python} using \textbf{PyTorch} to evaluate the performance of the proposed algorithms against existing methods.}
       \resumeItemListEnd
 
     \resumeSubheading
-    % fluff up 
-    % fewer technical detials
-    % include project overview (industry known terms)
       {Manufacturing Software Researcher}{March 2024 – Present}
       {Digital Enterprise Center}{West Lafayette, IN}
       \resumeItemListStart
-        \resumeItem{\underline{Problem}: In assembly lines that employ human technicians, foreign objects (tools, drill bits, etc.) can be left behind, causing damage to machinery and products.}
-        \resumeItem{Leading a team of two to build a program that identifies when foreign objects are left behind and notifies the operator by implementing a \textbf{two-stage segmentation} architecture.
+        \resumeItem{Leading a team of two to build a \textbf{Python} program that identifies foriegn objects in manufacturing settings using \textbf{Patch Distribution Modeling}.
         }
+        \resumeItem{Researching and implementing assembly traceability and tolerance enforcement strategies using a \textbf{MySQL} database and an \textbf{Atlas Copco Tool Controller}.}
         \resumeItem{Implemented an automated documentation process to enhance clarity for future developers by leveraging \textbf{GitHub Actions} and \textbf{Pages} to maintain an up-to-date, accessible API documentation \href{https://jlz22.github.io/Computer-Vision-for-FOD/index.html}{\underline{site}}.}
         \resumeItem{Built a desktop application prototype for a real time multi-camera detection system using \textbf{Rust}, \textbf{Tauri}, and \textbf{Svelte}. 
         }
         \resumeItemListStart
-        \vspace{-12pt}
-        \resumeItem{Optimize frame rate by \textbf{5x} with a combination of \textbf{asynchronous runtimes} and \textbf{multi-threading} to process camera inputs and inference in parallel.}
+        \vspace{-1pt}
+        \resumeItem{Optimized frame rate by \textbf{5x} with a combination of \textbf{asynchronous runtimes} and \textbf{multi-threading} to process camera inputs and inference in parallel.}
         \vspace{2pt}
         \resumeItemListEnd
-        \resumeItem{Applied \textbf{image augmentation} to generate synthetic data, effectively addressing data collection and labelling challenges posed by a short-staffed team.
-        }
         \resumeItemListEnd
-      
-    \resumeSubheading
-      {Head Teaching Assistant for Advanced + Regular Programming}{Summer 2024}
-      {The Harker School}{San Jose, CA}
-      \resumeItemListStart
-        \resumeItem{Taught lessons in memory allocation, object and data-type basics, recursion, and coding standards.
-        }
-        \resumeItem{Provided clarification to junior TAs for ambiguous assignment instructions and grading rubrics.
-        }
-        \resumeItem{Led review sessions to explain frequently missed test questions and difficult concepts.
-        }
-      \resumeItemListEnd
-
-    \resumeSubheading
-    {Investment Analyst Intern}{Summer 2022}
-    {Draper Dragon}{San Mateo, CA}
-      \resumeItemListStart
-        \resumeItem{Researched \textbf{metaverse/blockchain gaming} space and presented to general partners about the nuanced differences in industry leaders’ platform designs along with their respective drawbacks and benefits.
-        }
-        \resumeItem{Wrote two investment \href{https://drive.google.com/file/d/14b7ZHeRLfU3-GW80YL8XoYoTLx4nNZax/view?usp=sharing}{\underline{memos}} detailing company financials, market opportunity, risk factors, platform/product description, competition, valuation, company history, and team history.}
-        \resumeItemListEnd
+    
     \resumeSubHeadingListEnd
 
-%-----------PROJECTS-----------
+%-----------Projects-----------
 \section{Projects}
-
-    \resumeSubHeadingListStart
+\resumeSubHeadingListStart
       \resumeProjectHeading
-          {\textbf{Rugby Drill Simulator} $|$ \emph{Python, PyGame}}
+          {\textbf{Wisconsin Minibase Project} $|$ \emph{Java}}{Spring 2025}
           \resumeItemListStart
-            \resumeItem{Using Python and PyGame to simulate a common rugby passing drill "infinite passing" to demonstrate a phenomenon I call player oscillations
+            \resumeItem{Implementing the core components of a \textbf{Database Management System}}
+            \resumeItem{File and Space Management: Heap Files, Buffer Pools}
+            \resumeItem{Indexing: B+ trees}
+            \resumeItem{Query Processing: Query Parsing, Query Optimization, Query Execution}
+            \resumeItemListEnd
+
+          \resumeProjectHeading
+              {\textbf{Berkely Pac-man Projects} $|$ \emph{Python, Numpy, PyTorch}}{Fall 2024}
+              \resumeItemListStart
+                \resumeItem{Implemented a variety of foundational AI algorithms in the Pac-man environment.}
+                \resumeItem{Vanilla Searches: DFS, BFS, UCS, \textbf{A*}}
+                \resumeItem{Stochastic Searches: Minimax and \textbf{Expectimax} with the \textbf{Alpha-Beta pruning} optimization}
+                \resumeItem{Reinforcement Learning: Q-learning, \textbf{Approximate Q-learning}}
+                \resumeItem{Supervised Learning: Hidden Markov Model, Bayes Net}  
+              \resumeItemListEnd
+              
+      \resumeProjectHeading
+          {\textbf{Rugby Infinite Passing Simulator} $|$ \emph{Python, PyGame}}{Winter 2024}
+          \resumeItemListStart
+            \resumeItem{Using Python and \textbf{PyGame} to simulate a common rugby passing drill "infinite passing" to demonstrate a phenomenon I call player oscillations
             }
             \resumeItem{Mathematically determines if and when a player will oscillate between two lines given any valid drill configuration and number of total passes.}
-            \resumeItem{Includes proofs and lemmas supporting the algorithm's correctness and efficiency. }
+            \resumeItem{Includes \textbf{proofs} and \textbf{lemmas} supporting the algorithm's correctness and efficiency. }
           \resumeItemListEnd
-
+         
       \resumeProjectHeading
-          {\textbf{Shell} $|$ \emph{Lex, Yacc, C++, CMake}}
+          {\textbf{johnzeng.me} $|$ \emph{Astro, TailwindCSS, Javascript, Cloudflare}}{Winter 2024}
           \resumeItemListStart
-            \resumeItem{Created a shell interface capable of executing commands with \textbf{subshell}, if/while statements, script execution, and \textbf{wildcarding} in addition to basic terminal functions like \textbf{pipes}, env variables, and \textbf{file system traversal}.
+            \resumeItem{Built a personal website with the Astro web framework, leveraging Cloudflare and Github for \textbf{CI/CD}.}
+            \resumeItem{Leveraged TailwindCSS to create a \textbf{responsive design}, ensuring compatibility with mobile and desktop devices.}  
+          \resumeItemListEnd
+         
+      \resumeProjectHeading
+          {\textbf{Shell} $|$ \emph{Lex, Yacc, C++, CMake}}{Spring 2024}
+          \resumeItemListStart
+            \resumeItem{Implemented a Unix shell interface capable of executing commands with \textbf{subshell}, if/while statements, script execution, and \textbf{wildcarding} in addition to basic terminal functions like \textbf{pipes}, env variables, and \textbf{file system traversal}.
             }
           \resumeItemListEnd
-         
-      \resumeProjectHeading
-          {\textbf{Git Tutorial} $|$ \emph{Markdown}}
-          \resumeItemListStart
-            \resumeItem{Educated inexperienced developers on the basics of Git}
-            \resumeItem{Covered topics such as cloning, branching, committing, and pushing.}
-            % \resumeItem{Provided examples of and solutions to common problems like \textbf{merge conflicts} along with links to further research.}
-          \resumeItemListEnd
-         
+
     \resumeSubHeadingListEnd
-
-
-%
-%-----------TECHNICAL SKILLS-----------
-\section{Technical Skills}
- \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-     \textbf{Languages}{: Rust, Python, Java, C, C++, Javascript/Typescript, HTML, CSS} \\
-     \textbf{Frameworks}{: Ultralytics, Tensorflow, Keras, Pytorch, Astro, Svelte, Tauri, TailwindCSS} \\
-     \textbf{Libraries}{: OpenCV, Imgaug, NumPy, Pandas, PyGame} \\
-    }}
- \end{itemize}
-
-
-%-------------------------------------------
 \end{document}
